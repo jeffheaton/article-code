@@ -85,7 +85,7 @@ with codecs.open(pathArticles, "w", ENCODING) as articlesFH, \
                 if ns == 10:
                     templateCount += 1
                     templateWriter.writerow([id, title])
-                elif len(redirect) > 0:
+                elif len(redirect) == 0:
                     articleCount += 1
                     articlesWriter.writerow([id, title, redirect])
                 else:
